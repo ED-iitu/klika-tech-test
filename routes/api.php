@@ -19,8 +19,10 @@ use Illuminate\Http\Request;
 
 //Route::group('');
 
-Route::get('/track' , 'Track\TrackController@list');
+Route::get('/tracks' , 'Track\TrackController@list')->name('tracks');
 
-Route::get('/genres' , 'Genre\GenreController@list');
+Route::get('/genres' , 'Genre\GenreController@list')->name('genres');
 
-Route::get('/authors' , 'Author\AuthorController@list');
+Route::get('/authors' , 'Author\AuthorController@list')->name('authors');
+
+Route::get('/years' , 'Track\TrackController@getYear')->name('years');
